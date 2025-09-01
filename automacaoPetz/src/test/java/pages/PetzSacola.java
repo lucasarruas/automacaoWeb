@@ -16,7 +16,7 @@ public class PetzSacola extends BasePO{
      *
      * @param driver Driver da página atual
      */
-    protected PetzSacola(WebDriver driver) {
+    public PetzSacola(WebDriver driver) {
         super(driver);
     }
 }

@@ -18,7 +18,7 @@ public class PetzPaginaProduto extends BasePO {
      *
      * @param driver Driver da página atual
      */
-    protected PetzPaginaProduto(WebDriver driver) {
+    public PetzPaginaProduto(WebDriver driver) {
         super(driver);
     }
 }

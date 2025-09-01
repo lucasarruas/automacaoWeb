@@ -23,7 +23,7 @@ public class PetzCookies extends BasePO{
      *
      * @param driver Driver da página atual
      */
-    protected PetzCookies(WebDriver driver) {
+    public PetzCookies(WebDriver driver) {
         super(driver);
     }
 }

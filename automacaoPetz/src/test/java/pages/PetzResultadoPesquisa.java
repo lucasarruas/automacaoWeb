@@ -19,7 +19,7 @@ public class PetzResultadoPesquisa extends BasePO{
      */
 
 
-    protected PetzResultadoPesquisa(WebDriver driver) {
+    public PetzResultadoPesquisa(WebDriver driver) {
         super(driver);
     }
 }
