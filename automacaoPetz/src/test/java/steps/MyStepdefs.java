@@ -1,6 +1,8 @@
 package steps;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.*;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -36,16 +38,16 @@ public class MyStepdefs{
 
     @And("na pagina do produto inclui o produto no carrinho e ir ate o carrinho de compra")
     public void na_pagina_do_produto_inclui_o_produto_no_carrinho_e_ir_ate_o_carrinho_de_compra() {
-        //valorAtual = petzPaginaProduto.pegaValorDoItem.getText();
         petzPaginaProduto = new PetzPaginaProduto(driver);
         petzPaginaProduto.adicionaNaSacola.click();
     }
 
     @Then("devera verificar se estao corretos os valores do produto {string}")
     public void devera_verificar_se_estao_corretos_os_valores_do_produto(String string) throws InterruptedException {
-        Thread.sleep(4000);
+        WebDriverWait wait = new WebDriverWait(driver, 4);
         petzSacola = new PetzSacola(driver);
-        //String valorSacola = petzSacola.valorSacola.getText();
-        assertEquals(petzSacola.valorSacola,string);
+        //Aguarda o elemento estar visivel
+        wait.until(ExpectedConditions.visibilityOf(petzSacola.valorSacola));
+        assertEquals(petzSacola.valorSacola.getText(),string);
     }
 }

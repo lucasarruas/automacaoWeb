@@ -22,11 +22,6 @@ public class Hooks {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get(URL_BASE);
-        //petzHome = new PetzHome(driver);
-        //petzCookies = new PetzCookies(driver);
-        //petzResultadoPesquisa = new PetzResultadoPesquisa(driver);
-        //petzPaginaProduto = new PetzPaginaProduto(driver);
-        //petzSacola = new PetzSacola(driver);
     }
 
     @After
